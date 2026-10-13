@@ -4,10 +4,10 @@ Web estática y móvil para una demostración educativa sobre seguridad con cód
 
 ## Recorrido
 
-1. Una bienvenida plausible invita a abrir la guía del evento.
-2. La página muestra una solicitud de acceso simulada, sin campos editables.
-3. Cualquier decisión conduce a la explicación y a la regla «Para, mira, piensa».
-4. La experiencia termina mostrando la agenda pública completa del Día Senior.
+1. La portada separa claramente la agenda y la prueba educativa del login.
+2. La agenda muestra únicamente el programa público del Día Senior.
+3. La prueba muestra una solicitud de acceso simulada, sin campos editables.
+4. Cualquier decisión conduce a la explicación y a la regla «Para, mira, piensa».
 
 La web no recopila, almacena ni transmite datos.
 

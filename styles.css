@@ -157,6 +157,104 @@ h1 {
   margin-bottom: 24px;
 }
 
+.home-options {
+  display: grid;
+  gap: 15px;
+  margin: 32px 0 10px;
+}
+
+.option-card {
+  display: grid;
+  grid-template-columns: 54px 1fr 26px;
+  gap: 14px;
+  width: 100%;
+  min-height: 112px;
+  align-items: center;
+  padding: 18px;
+  border: 2px solid transparent;
+  border-radius: 20px;
+  color: var(--ink);
+  cursor: pointer;
+  text-align: left;
+  transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
+}
+
+.option-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow);
+}
+
+.option-card:active {
+  transform: translateY(0);
+}
+
+.option-card:focus-visible {
+  outline: 4px solid #ffd36a;
+  outline-offset: 3px;
+}
+
+.option-card--agenda {
+  border-color: rgba(36, 92, 159, 0.18);
+  background: var(--blue-soft);
+}
+
+.option-card--challenge {
+  border-color: rgba(231, 111, 61, 0.2);
+  background: var(--orange-soft);
+}
+
+.option-card__icon {
+  display: grid;
+  width: 52px;
+  height: 52px;
+  place-items: center;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.82);
+  font-size: 1.55rem;
+}
+
+.option-card__text {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.option-card__text strong {
+  font-size: 1.08rem;
+}
+
+.option-card__text small {
+  color: var(--muted);
+  font-size: 0.83rem;
+  line-height: 1.4;
+}
+
+.option-card__arrow {
+  color: var(--blue-dark);
+  font-size: 1.35rem;
+  font-weight: 900;
+}
+
+.back-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0 0 32px;
+  padding: 10px 0;
+  border: 0;
+  color: var(--blue-dark);
+  background: transparent;
+  cursor: pointer;
+  font-size: 0.92rem;
+  font-weight: 850;
+}
+
+.back-button:focus-visible {
+  outline: 3px solid #ffd36a;
+  outline-offset: 4px;
+}
+
 .info-list {
   display: grid;
   gap: 13px;
@@ -468,11 +566,17 @@ h1 {
   margin-bottom: 30px;
 }
 
+.schedule__heading h1,
 .schedule__heading h2 {
   margin: 0;
+  max-width: none;
   font-size: clamp(1.75rem, 7vw, 2.35rem);
   line-height: 1.05;
   letter-spacing: -0.035em;
+}
+
+.schedule--standalone {
+  margin-top: 0;
 }
 
 .schedule__date {
@@ -553,6 +657,7 @@ h1 {
   min-width: 0;
 }
 
+.timeline__content h2,
 .timeline__content h3 {
   margin: 0 0 7px;
   font-size: 1.08rem;

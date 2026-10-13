@@ -27,34 +27,179 @@
         <p class="eyebrow">Día Senior · Visita a la oficina</p>
         <h1 id="welcome-title">¡Te damos la bienvenida!</h1>
         <p class="lead">
-          Aquí encontrarás la agenda de hoy, la información del Wi-Fi y una pequeña
-          sorpresa para empezar.
+          Elige qué quieres consultar: el programa de actividades o la prueba educativa
+          sobre códigos QR.
         </p>
 
-        <div class="info-list" aria-label="Contenido de la guía">
-          <div><span aria-hidden="true">✓</span> Agenda del encuentro</div>
-          <div><span aria-hidden="true">✓</span> Acceso para visitantes</div>
-          <div><span aria-hidden="true">✓</span> Material de la actividad</div>
-        </div>
+        <div class="home-options" aria-label="Opciones de la web">
+          <button class="option-card option-card--agenda" type="button" data-action="open-schedule">
+            <span class="option-card__icon" aria-hidden="true">📅</span>
+            <span class="option-card__text">
+              <strong>Agenda del día</strong>
+              <small>Consulta horarios, actividades y ubicaciones.</small>
+            </span>
+            <span class="option-card__arrow" aria-hidden="true">→</span>
+          </button>
 
-        <button class="button button--primary" type="button" data-action="open-guide">
-          Abrir mi guía
-          <span aria-hidden="true">→</span>
-        </button>
+          <button class="option-card option-card--challenge" type="button" data-action="open-challenge">
+            <span class="option-card__icon" aria-hidden="true">🔒</span>
+            <span class="option-card__text">
+              <strong>Prueba del login</strong>
+              <small>Participa en una breve experiencia de ciberseguridad.</small>
+            </span>
+            <span class="option-card__arrow" aria-hidden="true">→</span>
+          </button>
+        </div>
 
         <p class="privacy-note">
           Experiencia formativa. Esta página no recoge ni almacena datos personales.
         </p>
       </section>
 
-      <section class="screen" id="checkpoint" aria-labelledby="checkpoint-title" hidden>
-        <div class="step-indicator" aria-label="Paso 2 de 3">
-          <span class="step-indicator__dot step-indicator__dot--done"></span>
-          <span class="step-indicator__line step-indicator__line--done"></span>
-          <span class="step-indicator__dot step-indicator__dot--current"></span>
-          <span class="step-indicator__line"></span>
-          <span class="step-indicator__dot"></span>
+      <section class="screen screen--schedule" id="schedule" aria-labelledby="schedule-title" hidden>
+        <button class="back-button" type="button" data-action="home">
+          <span aria-hidden="true">←</span> Volver al inicio
+        </button>
+
+        <div class="schedule schedule--standalone">
+          <div class="schedule__heading">
+            <div>
+              <p class="eyebrow">Programa del encuentro</p>
+              <h1 id="schedule-title">Agenda del día</h1>
+            </div>
+            <span class="schedule__date">Día Senior</span>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="10:00">10:00</time>
+                <span>30 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>Welcome y acreditación</h2>
+                <p>Llegada, check-in, firma del derecho de imagen y tour por la oficina.</p>
+                <div class="timeline__meta">
+                  <span>📍 Hall</span>
+                  <span>Vanesa, Mª José y Estela</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="10:30">10:30</time>
+                <span>30 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>¿Qué hacemos en GFT?</h2>
+                <p>Descubrimos el trabajo de GFT y los roles de sus hijos e hijas.</p>
+                <div class="timeline__meta">
+                  <span>📍 Gradas</span>
+                  <span>Belén y Raquel</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="11:00">11:00</time>
+                <span>20 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>Desayuno</h2>
+                <p>Un descanso para compartir y conversar.</p>
+                <div class="timeline__meta">
+                  <span>📍 Comedor</span>
+                  <span>Vanesa y Toni</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="11:20">11:20</time>
+                <span>40 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>¿Qué es la inteligencia artificial?</h2>
+                <p>Una introducción cercana a la IA y a sus posibilidades.</p>
+                <div class="timeline__meta">
+                  <span>📍 Gradas</span>
+                  <span>Carlos Ferrer y Alicia Sanz</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item timeline__item--featured">
+              <div class="timeline__time">
+                <time datetime="12:00">12:00</time>
+                <span>60 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>Rotación por tres actividades</h2>
+                <p>Grupos de 20 minutos que irán pasando por tres estaciones.</p>
+                <ul class="stations">
+                  <li>
+                    <strong>Foto con PhotoFloor</strong>
+                    <span>Espacio colaborativo · Mesa alta</span>
+                    <small>Cristina Giner y Silvia Cordero</small>
+                  </li>
+                  <li>
+                    <strong>Lectura de códigos QR</strong>
+                    <span>Sala 8</span>
+                    <small>Diego</small>
+                  </li>
+                  <li>
+                    <strong>Actividad 3/3</strong>
+                    <span>Sala Gradas</span>
+                    <small>Jorge Bellver</small>
+                  </li>
+                </ul>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="13:00">13:00</time>
+                <span>30 min</span>
+              </div>
+              <div class="timeline__content">
+                <h2>Taller de ciberseguridad</h2>
+                <p>Consejos prácticos para desenvolvernos con más seguridad en internet.</p>
+                <div class="timeline__meta">
+                  <span>📍 Gradas</span>
+                  <span>María Beleret y Alejandro Vázquez</span>
+                </div>
+              </div>
+            </li>
+
+            <li class="timeline__item">
+              <div class="timeline__time">
+                <time datetime="13:30">13:30</time>
+                <span>Cierre</span>
+              </div>
+              <div class="timeline__content">
+                <h2>Cierre y despedida</h2>
+                <p>Conclusiones de la jornada y despedida.</p>
+                <div class="timeline__meta">
+                  <span>📍 Gradas</span>
+                  <span>Raquel y Gimilio</span>
+                </div>
+              </div>
+            </li>
+          </ol>
         </div>
+
+        <button class="button button--secondary" type="button" data-action="home">
+          Volver al inicio
+        </button>
+      </section>
+
+      <section class="screen" id="checkpoint" aria-labelledby="checkpoint-title" hidden>
+        <button class="back-button" type="button" data-action="home">
+          <span aria-hidden="true">←</span> Volver al inicio
+        </button>
 
         <div class="lock-icon" aria-hidden="true">🔒</div>
         <p class="eyebrow">Un último paso</p>
@@ -127,138 +272,12 @@
           </p>
         </div>
 
-        <section class="schedule" aria-labelledby="schedule-title">
-          <div class="schedule__heading">
-            <div>
-              <p class="eyebrow">Programa del encuentro</p>
-              <h2 id="schedule-title">Agenda del día</h2>
-            </div>
-            <span class="schedule__date">Día Senior</span>
-          </div>
 
-          <ol class="timeline">
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="10:00">10:00</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>Welcome y acreditación</h3>
-                <p>Llegada, check-in, firma del derecho de imagen y tour por la oficina.</p>
-                <div class="timeline__meta">
-                  <span>📍 Hall</span>
-                  <span>Vanesa, Mª José y Estela</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="10:30">10:30</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>¿Qué hacemos en GFT?</h3>
-                <p>Descubrimos el trabajo de GFT y los roles de sus hijos e hijas.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Belén y Raquel</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="11:00">11:00</time>
-                <span>20 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>Desayuno</h3>
-                <p>Un descanso para compartir y conversar.</p>
-                <div class="timeline__meta">
-                  <span>📍 Comedor</span>
-                  <span>Vanesa y Toni</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="11:20">11:20</time>
-                <span>40 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>¿Qué es la inteligencia artificial?</h3>
-                <p>Una introducción cercana a la IA y a sus posibilidades.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Carlos Ferrer y Alicia Sanz</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item timeline__item--featured">
-              <div class="timeline__time">
-                <time datetime="12:00">12:00</time>
-                <span>60 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>Rotación por tres actividades</h3>
-                <p>Grupos de 20 minutos que irán pasando por tres estaciones.</p>
-                <ul class="stations">
-                  <li>
-                    <strong>Foto con PhotoFloor</strong>
-                    <span>Espacio colaborativo · Mesa alta</span>
-                    <small>Cristina Giner y Silvia Cordero</small>
-                  </li>
-                  <li>
-                    <strong>Lectura de códigos QR</strong>
-                    <span>Sala 8</span>
-                    <small>Diego</small>
-                  </li>
-                  <li>
-                    <strong>Actividad 3/3</strong>
-                    <span>Sala Gradas</span>
-                    <small>Jorge Bellver</small>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="13:00">13:00</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h3>Taller de ciberseguridad</h3>
-                <p>Consejos prácticos para desenvolvernos con más seguridad en internet.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>María Beleret y Alejandro Vázquez</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="13:30">13:30</time>
-                <span>Cierre</span>
-              </div>
-              <div class="timeline__content">
-                <h3>Cierre y despedida</h3>
-                <p>Conclusiones de la jornada y despedida.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Raquel y Gimilio</span>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </section>
-
-        <button class="button button--secondary" type="button" data-action="restart">
-          Repetir la demostración
+        <button class="button button--primary" type="button" data-action="restart">
+          Repetir la prueba
+        </button>
+        <button class="button button--secondary" type="button" data-action="home">
+          Volver al inicio
         </button>
 
         <p class="closing-note">No se ha recogido ningún dato durante esta actividad.</p>

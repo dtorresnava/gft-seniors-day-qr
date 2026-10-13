@@ -1,5 +1,6 @@
 const screens = {
   welcome: document.querySelector("#welcome"),
+  schedule: document.querySelector("#schedule"),
   checkpoint: document.querySelector("#checkpoint"),
   lesson: document.querySelector("#lesson"),
 };
@@ -37,7 +38,11 @@ function revealLesson(choice) {
   showScreen("lesson");
 }
 
-document.querySelector('[data-action="open-guide"]').addEventListener("click", () => {
+document.querySelector('[data-action="open-schedule"]').addEventListener("click", () => {
+  showScreen("schedule");
+});
+
+document.querySelector('[data-action="open-challenge"]').addEventListener("click", () => {
   showScreen("checkpoint");
 });
 
@@ -46,5 +51,9 @@ document.querySelectorAll("[data-choice]").forEach((button) => {
 });
 
 document.querySelector('[data-action="restart"]').addEventListener("click", () => {
-  showScreen("welcome");
+  showScreen("checkpoint");
+});
+
+document.querySelectorAll('[data-action="home"]').forEach((button) => {
+  button.addEventListener("click", () => showScreen("welcome"));
 });
