@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#f6f1e7" />
+    <meta
+      name="description"
+      content="Experiencia educativa sobre el uso seguro de códigos QR."
+    />
+    <title>Bienvenida · Día Senior</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="screen screen--active" id="welcome" aria-labelledby="welcome-title">
+        <div class="brand" aria-label="Punto de bienvenida">
+          <span class="brand__mark" aria-hidden="true">B</span>
+          <span>Punto de bienvenida</span>
+        </div>
+
+        <div class="welcome-illustration" aria-hidden="true">
+          <span class="welcome-illustration__sun"></span>
+          <span class="welcome-illustration__card">QR</span>
+        </div>
+
+        <p class="eyebrow">Día Senior · Visita a la oficina</p>
+        <h1 id="welcome-title">¡Te damos la bienvenida!</h1>
+        <p class="lead">
+          Aquí encontrarás la agenda de hoy, la información del Wi-Fi y una pequeña
+          sorpresa para empezar.
+        </p>
+
+        <div class="info-list" aria-label="Contenido de la guía">
+          <div><span aria-hidden="true">✓</span> Agenda del encuentro</div>
+          <div><span aria-hidden="true">✓</span> Acceso para visitantes</div>
+          <div><span aria-hidden="true">✓</span> Material de la actividad</div>
+        </div>
+
+        <button class="button button--primary" type="button" data-action="open-guide">
+          Abrir mi guía
+          <span aria-hidden="true">→</span>
+        </button>
+
+        <p class="privacy-note">
+          Experiencia formativa. Esta página no recoge ni almacena datos personales.
+        </p>
+      </section>
+
+      <section class="screen" id="checkpoint" aria-labelledby="checkpoint-title" hidden>
+        <div class="step-indicator" aria-label="Paso 2 de 3">
+          <span class="step-indicator__dot step-indicator__dot--done"></span>
+          <span class="step-indicator__line step-indicator__line--done"></span>
+          <span class="step-indicator__dot step-indicator__dot--current"></span>
+          <span class="step-indicator__line"></span>
+          <span class="step-indicator__dot"></span>
+        </div>
+
+        <div class="lock-icon" aria-hidden="true">🔒</div>
+        <p class="eyebrow">Un último paso</p>
+        <h1 id="checkpoint-title">Verifica tu acceso</h1>
+        <p class="lead lead--compact">
+          Para mostrar la información de visitantes, este portal solicita tu correo y
+          contraseña de empresa.
+        </p>
+
+        <div class="fake-form" aria-label="Ejemplo de solicitud de acceso; no admite datos">
+          <div class="fake-field">
+            <span class="fake-field__label">Correo de la empresa</span>
+            <span class="fake-field__value">nombre@empresa.com</span>
+          </div>
+          <div class="fake-field">
+            <span class="fake-field__label">Contraseña</span>
+            <span class="fake-field__value">••••••••••</span>
+          </div>
+        </div>
+
+        <button class="button button--primary" type="button" data-choice="continue">
+          Continuar
+        </button>
+        <button class="button button--secondary" type="button" data-choice="check">
+          Prefiero comprobarlo
+        </button>
+
+        <p class="safety-caption">
+          Los campos son solo una representación visual: no se puede escribir ni enviar
+          información.
+        </p>
+      </section>
+
+      <section class="screen screen--lesson" id="lesson" aria-labelledby="lesson-title" hidden>
+        <div class="result-badge" id="result-badge" aria-live="polite"></div>
+
+        <div class="alert-symbol" aria-hidden="true">!</div>
+        <p class="eyebrow">Simulación completada</p>
+        <h1 id="lesson-title">Este QR era una prueba segura</h1>
+        <p class="lead lead--compact" id="result-message"></p>
+
+        <div class="lesson-card">
+          <h2>¿Qué debía hacernos dudar?</h2>
+          <ul>
+            <li>
+              <span aria-hidden="true">1</span>
+              <p><strong>La petición era inesperada.</strong> Una agenda no debería necesitar tu contraseña.</p>
+            </li>
+            <li>
+              <span aria-hidden="true">2</span>
+              <p><strong>No comprobamos el destino.</strong> El dibujo del QR no dice quién está detrás.</p>
+            </li>
+            <li>
+              <span aria-hidden="true">3</span>
+              <p><strong>El entorno daba confianza.</strong> Estar dentro de una oficina no hace seguro un código.</p>
+            </li>
+          </ul>
+        </div>
+
+        <div class="rule" aria-label="Regla de seguridad: para, mira y piensa">
+          <p class="rule__title">Antes de abrir un QR:</p>
+          <div class="rule__steps">
+            <span><b>1</b> Para</span>
+            <span><b>2</b> Mira</span>
+            <span><b>3</b> Piensa</span>
+          </div>
+          <p>
+            Si pide una contraseña, un pago o instalar algo, cierra la página y entra desde
+            la aplicación oficial.
+          </p>
+        </div>
+
+        <button class="button button--secondary" type="button" data-action="restart">
+          Repetir la demostración
+        </button>
+
+        <p class="closing-note">No se ha recogido ningún dato durante esta actividad.</p>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
