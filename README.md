@@ -5,8 +5,8 @@ Web estática y móvil para una demostración educativa sobre seguridad con cód
 ## Recorrido
 
 1. La portada separa claramente la agenda y la prueba educativa del login.
-2. La agenda muestra únicamente el programa público del Día Senior.
-3. La prueba muestra una solicitud de acceso simulada, sin campos editables.
+2. `/calendario/` muestra únicamente el programa público del Día Senior.
+3. `/prueba-qr-login/` muestra una solicitud de acceso simulada, sin campos editables.
 4. Cualquier decisión conduce a la explicación y a la regla «Para, mira, piensa».
 
 La web no recopila, almacena ni transmite datos.
@@ -19,7 +19,11 @@ Desde esta carpeta:
 python3 -m http.server 4173
 ```
 
-Después, abre `http://localhost:4173`.
+Después, abre:
+
+- `http://localhost:4173/`
+- `http://localhost:4173/calendario/`
+- `http://localhost:4173/prueba-qr-login/`
 
 ## Publicar en ChatGPT Sites
 

@@ -6,14 +6,14 @@
     <meta name="theme-color" content="#f6f1e7" />
     <meta
       name="description"
-      content="Experiencia educativa sobre el uso seguro de códigos QR."
+      content="Acceso a la agenda y a la prueba educativa del Día Senior."
     />
     <title>Bienvenida · Día Senior</title>
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
     <main class="app-shell">
-      <section class="screen screen--active" id="welcome" aria-labelledby="welcome-title">
+      <section class="screen screen--active" aria-labelledby="welcome-title">
         <div class="brand" aria-label="Punto de bienvenida">
           <span class="brand__mark" aria-hidden="true">B</span>
           <span>Punto de bienvenida</span>
@@ -31,259 +31,30 @@
           sobre códigos QR.
         </p>
 
-        <div class="home-options" aria-label="Opciones de la web">
-          <button class="option-card option-card--agenda" type="button" data-action="open-schedule">
+        <nav class="home-options" aria-label="Opciones de la web">
+          <a class="option-card option-card--agenda" href="./calendario/">
             <span class="option-card__icon" aria-hidden="true">📅</span>
             <span class="option-card__text">
               <strong>Agenda del día</strong>
               <small>Consulta horarios, actividades y ubicaciones.</small>
             </span>
             <span class="option-card__arrow" aria-hidden="true">→</span>
-          </button>
+          </a>
 
-          <button class="option-card option-card--challenge" type="button" data-action="open-challenge">
+          <a class="option-card option-card--challenge" href="./prueba-qr-login/">
             <span class="option-card__icon" aria-hidden="true">🔒</span>
             <span class="option-card__text">
               <strong>Prueba del login</strong>
               <small>Participa en una breve experiencia de ciberseguridad.</small>
             </span>
             <span class="option-card__arrow" aria-hidden="true">→</span>
-          </button>
-        </div>
+          </a>
+        </nav>
 
         <p class="privacy-note">
           Experiencia formativa. Esta página no recoge ni almacena datos personales.
         </p>
       </section>
-
-      <section class="screen screen--schedule" id="schedule" aria-labelledby="schedule-title" hidden>
-        <button class="back-button" type="button" data-action="home">
-          <span aria-hidden="true">←</span> Volver al inicio
-        </button>
-
-        <div class="schedule schedule--standalone">
-          <div class="schedule__heading">
-            <div>
-              <p class="eyebrow">Programa del encuentro</p>
-              <h1 id="schedule-title">Agenda del día</h1>
-            </div>
-            <span class="schedule__date">Día Senior</span>
-          </div>
-
-          <ol class="timeline">
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="10:00">10:00</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>Welcome y acreditación</h2>
-                <p>Llegada, check-in, firma del derecho de imagen y tour por la oficina.</p>
-                <div class="timeline__meta">
-                  <span>📍 Hall</span>
-                  <span>Vanesa, Mª José y Estela</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="10:30">10:30</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>¿Qué hacemos en GFT?</h2>
-                <p>Descubrimos el trabajo de GFT y los roles de sus hijos e hijas.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Belén y Raquel</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="11:00">11:00</time>
-                <span>20 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>Desayuno</h2>
-                <p>Un descanso para compartir y conversar.</p>
-                <div class="timeline__meta">
-                  <span>📍 Comedor</span>
-                  <span>Vanesa y Toni</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="11:20">11:20</time>
-                <span>40 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>¿Qué es la inteligencia artificial?</h2>
-                <p>Una introducción cercana a la IA y a sus posibilidades.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Carlos Ferrer y Alicia Sanz</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item timeline__item--featured">
-              <div class="timeline__time">
-                <time datetime="12:00">12:00</time>
-                <span>60 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>Rotación por tres actividades</h2>
-                <p>Grupos de 20 minutos que irán pasando por tres estaciones.</p>
-                <ul class="stations">
-                  <li>
-                    <strong>Foto con PhotoFloor</strong>
-                    <span>Espacio colaborativo · Mesa alta</span>
-                    <small>Cristina Giner y Silvia Cordero</small>
-                  </li>
-                  <li>
-                    <strong>Lectura de códigos QR</strong>
-                    <span>Sala 8</span>
-                    <small>Diego</small>
-                  </li>
-                  <li>
-                    <strong>Actividad 3/3</strong>
-                    <span>Sala Gradas</span>
-                    <small>Jorge Bellver</small>
-                  </li>
-                </ul>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="13:00">13:00</time>
-                <span>30 min</span>
-              </div>
-              <div class="timeline__content">
-                <h2>Taller de ciberseguridad</h2>
-                <p>Consejos prácticos para desenvolvernos con más seguridad en internet.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>María Beleret y Alejandro Vázquez</span>
-                </div>
-              </div>
-            </li>
-
-            <li class="timeline__item">
-              <div class="timeline__time">
-                <time datetime="13:30">13:30</time>
-                <span>Cierre</span>
-              </div>
-              <div class="timeline__content">
-                <h2>Cierre y despedida</h2>
-                <p>Conclusiones de la jornada y despedida.</p>
-                <div class="timeline__meta">
-                  <span>📍 Gradas</span>
-                  <span>Raquel y Gimilio</span>
-                </div>
-              </div>
-            </li>
-          </ol>
-        </div>
-
-        <button class="button button--secondary" type="button" data-action="home">
-          Volver al inicio
-        </button>
-      </section>
-
-      <section class="screen" id="checkpoint" aria-labelledby="checkpoint-title" hidden>
-        <button class="back-button" type="button" data-action="home">
-          <span aria-hidden="true">←</span> Volver al inicio
-        </button>
-
-        <div class="lock-icon" aria-hidden="true">🔒</div>
-        <p class="eyebrow">Un último paso</p>
-        <h1 id="checkpoint-title">Verifica tu acceso</h1>
-        <p class="lead lead--compact">
-          Para mostrar la información de visitantes, este portal solicita tu correo y
-          contraseña de empresa.
-        </p>
-
-        <div class="fake-form" aria-label="Ejemplo de solicitud de acceso; no admite datos">
-          <div class="fake-field">
-            <span class="fake-field__label">Correo de la empresa</span>
-            <span class="fake-field__value">nombre@empresa.com</span>
-          </div>
-          <div class="fake-field">
-            <span class="fake-field__label">Contraseña</span>
-            <span class="fake-field__value">••••••••••</span>
-          </div>
-        </div>
-
-        <button class="button button--primary" type="button" data-choice="continue">
-          Continuar
-        </button>
-        <button class="button button--secondary" type="button" data-choice="check">
-          Prefiero comprobarlo
-        </button>
-
-        <p class="safety-caption">
-          Los campos son solo una representación visual: no se puede escribir ni enviar
-          información.
-        </p>
-      </section>
-
-      <section class="screen screen--lesson" id="lesson" aria-labelledby="lesson-title" hidden>
-        <div class="result-badge" id="result-badge" aria-live="polite"></div>
-
-        <div class="alert-symbol" aria-hidden="true">!</div>
-        <p class="eyebrow">Simulación completada</p>
-        <h1 id="lesson-title">Este QR era una prueba segura</h1>
-        <p class="lead lead--compact" id="result-message"></p>
-
-        <div class="lesson-card">
-          <h2>¿Qué debía hacernos dudar?</h2>
-          <ul>
-            <li>
-              <span aria-hidden="true">1</span>
-              <p><strong>La petición era inesperada.</strong> Una agenda no debería necesitar tu contraseña.</p>
-            </li>
-            <li>
-              <span aria-hidden="true">2</span>
-              <p><strong>No comprobamos el destino.</strong> El dibujo del QR no dice quién está detrás.</p>
-            </li>
-            <li>
-              <span aria-hidden="true">3</span>
-              <p><strong>El entorno daba confianza.</strong> Estar dentro de una oficina no hace seguro un código.</p>
-            </li>
-          </ul>
-        </div>
-
-        <div class="rule" aria-label="Regla de seguridad: para, mira y piensa">
-          <p class="rule__title">Antes de abrir un QR:</p>
-          <div class="rule__steps">
-            <span><b>1</b> Para</span>
-            <span><b>2</b> Mira</span>
-            <span><b>3</b> Piensa</span>
-          </div>
-          <p>
-            Si pide una contraseña, un pago o instalar algo, cierra la página y entra desde
-            la aplicación oficial.
-          </p>
-        </div>
-
-
-        <button class="button button--primary" type="button" data-action="restart">
-          Repetir la prueba
-        </button>
-        <button class="button button--secondary" type="button" data-action="home">
-          Volver al inicio
-        </button>
-
-        <p class="closing-note">No se ha recogido ningún dato durante esta actividad.</p>
-      </section>
     </main>
-
-    <script src="app.js"></script>
   </body>
 </html>
