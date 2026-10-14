@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#072146" />
+    <meta
+      name="description"
+      content="Simulación educativa de una página bancaria falsa para un taller de ciberseguridad."
+    />
+    <title>Acceso clientes | BBVA</title>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+  <body class="bank-demo-body">
+    <main class="bank-page">
+      <section class="bank-screen bank-screen--active" id="bank-login" aria-labelledby="bank-login-title">
+        <header class="bank-header">
+          <span class="bank-logo" aria-label="BBVA">BBVA</span>
+          <span class="bank-header__help">Ayuda</span>
+        </header>
+
+        <div class="bank-hero">
+          <p class="bank-kicker">Área privada</p>
+          <h1 id="bank-login-title" tabindex="-1">Bienvenido de nuevo</h1>
+          <p>Accede para consultar tus cuentas y realizar tus gestiones.</p>
+        </div>
+
+        <div class="bank-login-card">
+          <div class="bank-secure-label">
+            <span aria-hidden="true">🔒</span>
+            Acceso seguro
+          </div>
+
+          <div class="bank-fake-fields" aria-label="Representación visual de un formulario; no admite datos">
+            <div class="bank-fake-field">
+              <span>Usuario</span>
+              <strong>DNI o NIE</strong>
+            </div>
+            <div class="bank-fake-field">
+              <span>Clave de acceso</span>
+              <strong>••••••••</strong>
+            </div>
+          </div>
+
+          <button class="bank-button bank-button--primary" type="button" data-bank-choice="enter">
+            Entrar
+          </button>
+          <button class="bank-button bank-button--link" type="button" data-bank-choice="check">
+            Prefiero comprobar la dirección
+          </button>
+
+          <p class="bank-recovery">¿Olvidaste tu clave de acceso?</p>
+        </div>
+
+        <div class="bank-trust-row" aria-label="Mensajes visuales de confianza">
+          <span><b aria-hidden="true">✓</b> Conexión segura</span>
+          <span><b aria-hidden="true">✓</b> Protección antifraude</span>
+        </div>
+
+        <p class="bank-simulation-note">
+          Demostración educativa: los campos no permiten escribir ni enviar información.
+        </p>
+      </section>
+
+      <section class="bank-screen bank-lesson" id="bank-lesson" aria-labelledby="bank-lesson-title" hidden>
+        <div class="bank-lesson__top">
+          <span class="bank-lesson__icon" aria-hidden="true">!</span>
+          <p class="bank-kicker">Simulación completada</p>
+          <h1 id="bank-lesson-title" tabindex="-1">Esta no era la web de BBVA</h1>
+          <p class="bank-lesson__lead" id="bank-result-message"></p>
+        </div>
+
+        <div class="address-comparison">
+          <article class="address-card address-card--warning">
+            <span>La dirección que has abierto</span>
+            <strong>gft-seniors-day-qr.onrender.com</strong>
+            <small>/acceso-bbva-seguro/</small>
+          </article>
+          <article class="address-card address-card--safe">
+            <span>El dominio oficial</span>
+            <strong>www.bbva.es</strong>
+          </article>
+        </div>
+
+        <div class="domain-lesson">
+          <h2>La pista estaba antes de la primera barra</h2>
+          <p>
+            Palabras como <strong>acceso</strong>, <strong>seguro</strong> o <strong>BBVA</strong>
+            pueden aparecer después del dominio. Eso no convierte la página en oficial.
+          </p>
+          <ol>
+            <li><span>1</span> Detente antes de introducir datos.</li>
+            <li><span>2</span> Comprueba el dominio completo.</li>
+            <li><span>3</span> Entra desde la app o escribe tú la dirección oficial.</li>
+          </ol>
+        </div>
+
+        <a class="bank-button bank-button--primary" href="https://www.bbva.es/">
+          Ver la web oficial de BBVA
+        </a>
+        <button class="bank-button bank-button--secondary" type="button" data-bank-action="restart">
+          Repetir la prueba
+        </button>
+        <a class="bank-home-link" href="../">Volver al inicio del taller</a>
+
+        <p class="bank-simulation-note">No se ha recogido ni enviado ningún dato.</p>
+      </section>
+    </main>
+
+    <script src="../bbva-simulacion.js"></script>
+  </body>
+</html>
