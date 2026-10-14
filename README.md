@@ -8,6 +8,7 @@ Web estática y móvil para una demostración educativa sobre seguridad con cód
 2. `/calendario/` muestra únicamente el programa público del Día Senior.
 3. `/prueba-qr-login/` muestra una solicitud de acceso simulada, sin campos editables.
 4. Cualquier decisión conduce a la explicación y a la regla «Para, mira, piensa».
+5. `/acceso-bbva-seguro/` es una simulación bancaria segura, accesible solo mediante el QR del taller.
 
 La web no recopila, almacena ni transmite datos.
 
@@ -24,6 +25,7 @@ Después, abre:
 - `http://localhost:4173/`
 - `http://localhost:4173/calendario/`
 - `http://localhost:4173/prueba-qr-login/`
+- `http://localhost:4173/acceso-bbva-seguro/`
 
 ## Publicar en ChatGPT Sites
 

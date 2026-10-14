@@ -781,3 +781,341 @@ h1 {
     transition-duration: 0.01ms !important;
   }
 }
+
+/* Simulación bancaria segura */
+
+.bank-demo-body {
+  min-width: 320px;
+  color: #121f2d;
+  background: #f4f5f7;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.bank-page {
+  width: min(100%, 520px);
+  min-height: 100vh;
+  min-height: 100dvh;
+  margin: 0 auto;
+  background: white;
+  box-shadow: 0 0 50px rgba(7, 33, 70, 0.12);
+}
+
+.bank-screen {
+  min-height: 100vh;
+  min-height: 100dvh;
+  animation: enter 350ms ease both;
+}
+
+.bank-screen[hidden] {
+  display: none;
+}
+
+.bank-header {
+  display: flex;
+  height: 74px;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 24px;
+  color: white;
+  background: #072146;
+}
+
+.bank-logo {
+  font-size: 1.7rem;
+  font-weight: 900;
+  letter-spacing: -0.08em;
+}
+
+.bank-header__help {
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.bank-hero {
+  padding: 40px 24px 64px;
+  color: white;
+  background:
+    linear-gradient(135deg, rgba(7, 33, 70, 0.98), rgba(20, 100, 165, 0.92)),
+    #004481;
+}
+
+.bank-kicker {
+  margin: 0 0 10px;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.bank-hero h1,
+.bank-lesson h1 {
+  max-width: none;
+  margin: 0 0 14px;
+  font-size: clamp(2rem, 9vw, 3rem);
+  line-height: 1.04;
+  letter-spacing: -0.035em;
+}
+
+.bank-hero > p:last-child {
+  max-width: 32ch;
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.bank-login-card {
+  position: relative;
+  margin: -34px 18px 0;
+  padding: 26px 22px;
+  border-radius: 3px;
+  background: white;
+  box-shadow: 0 16px 35px rgba(7, 33, 70, 0.18);
+}
+
+.bank-secure-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 22px;
+  color: #1464a5;
+  font-size: 0.8rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.bank-fake-fields {
+  display: grid;
+  gap: 16px;
+}
+
+.bank-fake-field {
+  padding: 13px 0 10px;
+  border-bottom: 1px solid #8a96a3;
+}
+
+.bank-fake-field span,
+.bank-fake-field strong {
+  display: block;
+}
+
+.bank-fake-field span {
+  margin-bottom: 7px;
+  color: #5a6774;
+  font-size: 0.76rem;
+}
+
+.bank-fake-field strong {
+  color: #4d5a67;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.bank-button {
+  display: flex;
+  width: 100%;
+  min-height: 54px;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  padding: 14px 18px;
+  border: 2px solid transparent;
+  border-radius: 2px;
+  cursor: pointer;
+  font: inherit;
+  font-weight: 800;
+  text-align: center;
+  text-decoration: none;
+}
+
+.bank-button:focus-visible,
+.bank-home-link:focus-visible {
+  outline: 4px solid #f8cd51;
+  outline-offset: 3px;
+}
+
+.bank-button--primary {
+  color: white;
+  background: #1464a5;
+}
+
+.bank-button--secondary {
+  border-color: #1464a5;
+  color: #1464a5;
+  background: white;
+}
+
+.bank-button--link {
+  min-height: 42px;
+  margin-top: 8px;
+  color: #1464a5;
+  background: transparent;
+  font-size: 0.88rem;
+}
+
+.bank-recovery {
+  margin: 18px 0 0;
+  color: #1464a5;
+  font-size: 0.88rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.bank-trust-row {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  padding: 28px 24px 8px;
+  color: #435363;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+.bank-trust-row b {
+  color: #0c7b68;
+}
+
+.bank-simulation-note {
+  margin: 18px 24px 0;
+  padding-bottom: 26px;
+  color: #697684;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  text-align: center;
+}
+
+.bank-lesson {
+  padding: 30px 22px;
+}
+
+.bank-lesson__top {
+  padding: 30px 24px;
+  color: white;
+  background: #072146;
+}
+
+.bank-lesson__icon {
+  display: grid;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 24px;
+  place-items: center;
+  border-radius: 50%;
+  color: #072146;
+  background: #f8cd51;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.bank-lesson__lead {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.82);
+  line-height: 1.55;
+}
+
+.address-comparison {
+  display: grid;
+  gap: 12px;
+  margin: 22px 0;
+}
+
+.address-card {
+  padding: 18px;
+  border-left: 5px solid;
+  background: #f4f5f7;
+}
+
+.address-card span,
+.address-card strong,
+.address-card small {
+  display: block;
+}
+
+.address-card span {
+  margin-bottom: 7px;
+  color: #5a6774;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.address-card strong {
+  overflow-wrap: anywhere;
+  font-size: 0.94rem;
+}
+
+.address-card small {
+  margin-top: 5px;
+  color: #5a6774;
+}
+
+.address-card--warning {
+  border-color: #c9472c;
+}
+
+.address-card--safe {
+  border-color: #0c7b68;
+}
+
+.domain-lesson {
+  padding: 22px;
+  background: #eaf4fb;
+}
+
+.domain-lesson h2 {
+  margin: 0 0 12px;
+  font-size: 1.25rem;
+}
+
+.domain-lesson p {
+  margin: 0;
+  color: #435363;
+  line-height: 1.55;
+}
+
+.domain-lesson ol {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.domain-lesson li {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 10px;
+  align-items: center;
+  font-size: 0.92rem;
+  line-height: 1.4;
+}
+
+.domain-lesson li span {
+  display: grid;
+  width: 28px;
+  height: 28px;
+  place-items: center;
+  border-radius: 50%;
+  color: white;
+  background: #1464a5;
+  font-weight: 800;
+}
+
+.bank-home-link {
+  display: block;
+  margin-top: 22px;
+  color: #1464a5;
+  font-weight: 700;
+  text-align: center;
+}
+
+@media (min-width: 700px) {
+  .bank-demo-body {
+    padding: 32px 0;
+  }
+
+  .bank-page {
+    min-height: calc(100vh - 64px);
+    min-height: calc(100dvh - 64px);
+  }
+}
