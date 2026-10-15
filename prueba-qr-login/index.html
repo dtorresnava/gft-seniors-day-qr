@@ -89,12 +89,214 @@
           </p>
         </div>
 
-        <button class="button button--primary" type="button" data-action="restart">
-          Repetir la prueba
+        <button class="button button--primary" type="button" data-action="learn-qr">
+          Siguiente: entender el QR
         </button>
         <a class="button button--secondary" href="../">Volver al inicio</a>
 
         <p class="closing-note">No se ha recogido ningún dato durante esta actividad.</p>
+      </section>
+
+      <section class="screen screen--qr-explainer" id="qr-explainer" aria-labelledby="qr-explainer-title" hidden>
+        <button class="back-button" type="button" data-action="back-to-lesson">
+          <span aria-hidden="true">←</span> Volver a la explicación anterior
+        </button>
+
+        <p class="eyebrow">Paso a paso</p>
+        <h1 id="qr-explainer-title" tabindex="-1">¿Qué es un código QR?</h1>
+        <p class="lead lead--compact">
+          Es una manera de guardar información dentro de un dibujo de cuadrados. La cámara
+          del móvil traduce ese dibujo para nosotros.
+        </p>
+
+        <div class="qr-analogy">
+          <span class="qr-analogy__icon" aria-hidden="true">✉️</span>
+          <p>
+            Piensa en el QR como en <strong>un sobre cerrado</strong>: por fuera no vemos el
+            mensaje. Primero debemos leerlo para saber adónde quiere llevarnos.
+          </p>
+        </div>
+
+        <div class="qr-reading-demo">
+          <div class="qr-reading-demo__visual" aria-label="Un código QR delante de la cámara de un teléfono">
+            <img src="../qr-prueba-login.png" alt="Ejemplo de código QR" />
+            <span class="qr-reading-demo__arrow" aria-hidden="true">→</span>
+            <span class="qr-reading-demo__phone" aria-hidden="true">📱</span>
+          </div>
+
+          <button
+            class="button button--primary"
+            type="button"
+            data-action="scan-demo"
+            aria-expanded="false"
+            aria-controls="qr-demo-result"
+          >
+            Ver qué lee la cámara
+          </button>
+
+          <div class="qr-demo-result" id="qr-demo-result" tabindex="-1" hidden>
+            <p class="qr-demo-result__label">La cámara encuentra esta dirección:</p>
+            <p class="qr-demo-result__address">
+              <strong>gft-seniors-day-qr.onrender.com</strong><br />
+              <span>/prueba-qr-login/</span>
+            </p>
+            <p>
+              Ahora el teléfono puede ofrecernos abrirla. <strong>Todavía podemos decir que no</strong>
+              si la dirección no nos resulta conocida.
+            </p>
+          </div>
+        </div>
+
+        <div class="qr-how-it-works" aria-label="Cómo funciona un código QR en tres pasos">
+          <h2>Así funciona</h2>
+          <ol>
+            <li>
+              <span>1</span>
+              <p><strong>La cámara mira</strong> el dibujo de cuadrados.</p>
+            </li>
+            <li>
+              <span>2</span>
+              <p><strong>El móvil lo traduce</strong> en un texto o una dirección.</p>
+            </li>
+            <li>
+              <span>3</span>
+              <p><strong>Tú decides</strong> si quieres abrirla.</p>
+            </li>
+          </ol>
+        </div>
+
+        <div class="qr-key-message">
+          <span aria-hidden="true">💡</span>
+          <p>
+            <strong>Un QR no es bueno ni malo por sí mismo.</strong> Puede llevar al menú de un
+            restaurante, a una entrada o a una página engañosa. Lo importante es mirar el destino.
+          </p>
+        </div>
+
+        <button class="button button--secondary" type="button" data-action="learn-technical">
+          Si hay tiempo: cómo lo traduce el móvil
+        </button>
+        <button class="button button--primary" type="button" data-action="restart">
+          Repetir toda la prueba
+        </button>
+        <a class="button button--secondary" href="../">Volver al inicio</a>
+      </section>
+
+      <section class="screen screen--qr-technical" id="qr-technical" aria-labelledby="qr-technical-title" hidden>
+        <button class="back-button" type="button" data-action="back-to-explainer">
+          <span aria-hidden="true">←</span> Volver a la explicación sencilla
+        </button>
+
+        <p class="eyebrow">Contenido opcional</p>
+        <h1 id="qr-technical-title" tabindex="-1">¿Cómo convierte los cuadrados en texto?</h1>
+        <p class="lead lead--compact">
+          La cámara no reconoce palabras. Primero reconstruye una cuadrícula y después
+          descodifica los ceros y unos siguiendo las reglas del QR.
+        </p>
+
+        <article class="technical-card">
+          <div class="technical-card__number">1</div>
+          <div>
+            <h2>Encuentra y orienta el código</h2>
+            <p>
+              Los tres cuadrados grandes de las esquinas son <strong>patrones de posición</strong>.
+              Indican dónde está el QR, su tamaño y cómo está girado.
+            </p>
+          </div>
+          <figure class="qr-anatomy">
+            <div class="qr-anatomy__image">
+              <img src="../qr-prueba-login.png" alt="Código QR con sus tres esquinas principales señaladas" />
+              <span class="qr-corner qr-corner--top-left" aria-hidden="true"></span>
+              <span class="qr-corner qr-corner--top-right" aria-hidden="true"></span>
+              <span class="qr-corner qr-corner--bottom-left" aria-hidden="true"></span>
+            </div>
+            <figcaption>Las tres marcas azules permiten localizarlo desde casi cualquier orientación.</figcaption>
+          </figure>
+        </article>
+
+        <article class="technical-card">
+          <div class="technical-card__number">2</div>
+          <div>
+            <h2>Endereza la imagen</h2>
+            <p>
+              Si el código está inclinado, el teléfono corrige la perspectiva y calcula una
+              cuadrícula recta antes de leer sus casillas.
+            </p>
+          </div>
+          <figure class="perspective-diagram">
+            <svg viewBox="0 0 420 190" role="img" aria-labelledby="perspective-title perspective-description">
+              <title id="perspective-title">Corrección de perspectiva de un código QR</title>
+              <desc id="perspective-description">Una cuadrícula inclinada se transforma en una cuadrícula recta.</desc>
+              <polygon class="perspective-diagram__tilted" points="35,38 160,20 185,150 18,165" />
+              <path d="M62 34 L45 160 M92 30 L80 157 M123 25 L115 153 M153 22 L150 150" />
+              <path d="M29 69 L168 53 M25 101 L174 87 M21 134 L180 119" />
+              <path class="perspective-diagram__arrow" d="M207 92 H267 M249 72 L269 92 L249 112" />
+              <rect class="perspective-diagram__straight" x="292" y="29" width="110" height="130" rx="5" />
+              <path d="M319 29 V159 M347 29 V159 M374 29 V159 M292 61 H402 M292 94 H402 M292 126 H402" />
+            </svg>
+            <figcaption>El móvil reconstruye una versión recta aunque hagamos la foto de lado.</figcaption>
+          </figure>
+        </article>
+
+        <article class="technical-card">
+          <div class="technical-card__number">3</div>
+          <div>
+            <h2>Convierte casillas en bits</h2>
+            <p>
+              Cada zona clara u oscura se interpreta siguiendo un orden. Después de retirar
+              la máscara del QR, el resultado es una secuencia de <strong>ceros y unos</strong>.
+            </p>
+          </div>
+          <figure class="bits-diagram">
+            <div class="bits-diagram__modules" aria-label="Ejemplo de casillas oscuras y claras">
+              <span class="is-dark"></span><span></span><span class="is-dark"></span>
+              <span class="is-dark"></span><span></span><span></span><span class="is-dark"></span>
+              <span></span>
+            </div>
+            <span class="bits-diagram__arrow" aria-hidden="true">↓</span>
+            <code>1 0 1 1 0 0 1 0</code>
+            <figcaption>Los cuadrados no son letras: representan datos binarios.</figcaption>
+          </figure>
+        </article>
+
+        <article class="technical-card">
+          <div class="technical-card__number">4</div>
+          <div>
+            <h2>Corrige errores y forma el mensaje</h2>
+            <p>
+              El sistema <strong>Reed–Solomon</strong> puede recuperar parte de la información
+              aunque el QR esté algo sucio o tapado. Finalmente agrupa los bits en bytes y
+              obtiene el texto o la dirección web.
+            </p>
+          </div>
+          <figure class="decode-flow" aria-label="Los bits se convierten en una dirección de internet">
+            <div class="decode-flow__damaged">
+              <span aria-hidden="true">▦</span>
+              <i aria-hidden="true"></i>
+              <small>QR con una parte tapada</small>
+            </div>
+            <span class="decode-flow__arrow" aria-hidden="true">→</span>
+            <div class="decode-flow__result">
+              <span aria-hidden="true">✓</span>
+              <strong>Dirección recuperada</strong>
+              <code>https://…</code>
+            </div>
+          </figure>
+        </article>
+
+        <div class="technical-summary">
+          <p><strong>En resumen:</strong></p>
+          <p>Localiza → endereza → lee los bits → corrige errores → muestra el destino.</p>
+          <p>
+            El teléfono puede comprobar que el código está bien construido, pero
+            <strong>no puede asegurar que la página de destino sea de confianza</strong>.
+          </p>
+        </div>
+
+        <button class="button button--primary" type="button" data-action="restart">
+          Repetir toda la prueba
+        </button>
+        <a class="button button--secondary" href="../">Volver al inicio</a>
       </section>
     </main>
 
