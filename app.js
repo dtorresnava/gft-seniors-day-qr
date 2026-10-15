@@ -1,6 +1,8 @@
 const screens = {
   checkpoint: document.querySelector("#checkpoint"),
   lesson: document.querySelector("#lesson"),
+  qrExplainer: document.querySelector("#qr-explainer"),
+  qrTechnical: document.querySelector("#qr-technical"),
 };
 
 const resultBadge = document.querySelector("#result-badge");
@@ -40,6 +42,37 @@ document.querySelectorAll("[data-choice]").forEach((button) => {
   button.addEventListener("click", () => revealLesson(button.dataset.choice));
 });
 
-document.querySelector('[data-action="restart"]').addEventListener("click", () => {
-  showScreen("checkpoint");
+document.querySelector('[data-action="learn-qr"]').addEventListener("click", () => {
+  showScreen("qrExplainer");
+});
+
+document.querySelector('[data-action="back-to-lesson"]').addEventListener("click", () => {
+  showScreen("lesson");
+});
+
+document.querySelector('[data-action="learn-technical"]').addEventListener("click", () => {
+  showScreen("qrTechnical");
+});
+
+document.querySelector('[data-action="back-to-explainer"]').addEventListener("click", () => {
+  showScreen("qrExplainer");
+});
+
+const scanDemoButton = document.querySelector('[data-action="scan-demo"]');
+const qrDemoResult = document.querySelector("#qr-demo-result");
+
+scanDemoButton.addEventListener("click", () => {
+  qrDemoResult.hidden = false;
+  scanDemoButton.setAttribute("aria-expanded", "true");
+  scanDemoButton.textContent = "La cámara ya ha leído el QR";
+  qrDemoResult.focus({ preventScroll: true });
+});
+
+document.querySelectorAll('[data-action="restart"]').forEach((button) => {
+  button.addEventListener("click", () => {
+    qrDemoResult.hidden = true;
+    scanDemoButton.setAttribute("aria-expanded", "false");
+    scanDemoButton.textContent = "Ver qué lee la cámara";
+    showScreen("checkpoint");
+  });
 });
